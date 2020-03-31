@@ -1,26 +1,21 @@
 def is_all_upper(text: str) -> bool:
     # your code here
 
-    if text.isupper():
+    text2 = text.replace(" ", "")
 
-        return True
+    if text2.isalpha():
 
-    elif text.isspace():
+        if text2.isupper():
 
-        return True
+            return True
 
-    elif text.isalpha():
+        else:
 
-        return True
-
-    elif text == '':
-
-        return True
+            return False
 
     else:
 
-        return False
-
+        return True
 
 
 
