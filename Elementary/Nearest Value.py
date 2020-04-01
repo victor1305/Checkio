@@ -1,9 +1,56 @@
 def nearest_value(values: set, one: int) -> int:
+
     # your code here
 
-    diferencia = one - values[]
+    numbersList = list(values)
 
+    positiveDifferences = []
 
+    negativeDifferences = []
+
+    for i in numbersList:
+
+        difference = one - int(i)
+
+        if difference <= 0:
+
+            negativeDifferences.append(difference)
+
+        if difference > 0:
+
+            positiveDifferences.append(difference)
+
+    if negativeDifferences != []:
+
+        negativeMinDifference = max(negativeDifferences)
+
+    else:
+
+        negativeMinDifference = max(positiveDifferences)
+
+    if positiveDifferences != []:
+
+        positiveMinDifference = min(positiveDifferences)
+
+    else:
+
+        positiveMinDifference = min(negativeDifferences)
+
+    absoluteNegativeMinDifference = abs(negativeMinDifference)
+
+    if absoluteNegativeMinDifference == positiveMinDifference:
+
+        number = one - positiveMinDifference
+
+    elif absoluteNegativeMinDifference < abs(positiveMinDifference):
+
+        number = one + absoluteNegativeMinDifference
+
+    else:
+
+        number = one - positiveMinDifference
+
+    return number
 
 
 if __name__ == '__main__':
