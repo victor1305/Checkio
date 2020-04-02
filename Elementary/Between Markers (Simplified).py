@@ -4,7 +4,15 @@ def between_markers(text: str, begin: str, end: str) -> str:
     """
     # your code here
 
-    return (text.split(begin))[1].split(end)[0]
+    variable = (text.split(begin))[1]
+
+    variable2 = variable.split(end)[0]
+
+    return variable2
+
+
+'''Pythonic solution:
+    return (text.split(begin))[1].split(end)[0]'''
 
 
 

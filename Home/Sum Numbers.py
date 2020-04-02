@@ -2,7 +2,28 @@ def sum_numbers(text: str) -> int:
 
     # your code here
 
-    
+    textList = text.split()
+
+    numbersList=[]
+
+    for i in textList:
+
+        if i.isdigit():
+
+            numbersList.append(i)
+
+        else:
+
+            continue
+
+    sumNumbers = 0
+
+    for j in numbersList:
+
+        sumNumbers = sumNumbers + int(j)
+
+    return sumNumbers
+
 
 
 if __name__ == '__main__':
