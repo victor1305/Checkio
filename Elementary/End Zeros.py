@@ -1,11 +1,9 @@
 def end_zeros(num: int) -> int:
     # your code here
 
-    backwardnum = "".join(reversed(str(num)))
-
     counter = 0
 
-    for i in backwardnum:
+    for i in reversed(str(num)):
 
         if i == "0":
 
