@@ -2,7 +2,19 @@ def backward_string_by_word(text: str) -> str:
 
     # your code here
 
-    return None
+    textList = text.split(" ")
+
+    i = 0
+
+    for i in range(0, len(textList)):
+
+        textList[i] = textList[i][::-1]
+
+        i +=1
+
+    backwardString = " ".join(textList)
+
+    return backwardString
 
 
 if __name__ == '__main__':
