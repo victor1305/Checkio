@@ -14,7 +14,26 @@ MORSE = {'.-':    'a', '-...':  'b', '-.-.':  'c',
 
 def morse_decoder(code):
 
+    codeList = code.split("   ")
+    codeWord = []
 
+    for i in codeList:
+        codeWord.append(i.split())
+
+    word = []
+
+
+    for i in codeWord:
+        var = ""
+
+        for j in i:
+
+            if j in MORSE:
+                var += MORSE[j]
+
+        word.append(var)
+
+    return " ".join(word).capitalize()
 
 if __name__ == '__main__':
     print("Example:")
